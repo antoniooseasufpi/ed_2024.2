@@ -7,7 +7,7 @@ typedef struct aluno
     float *notas;
 } Aluno;
 
-void cadastrarAluno(int *contador, Aluno *alunos);
+Aluno *cadastrarAluno(int *contador, Aluno *alunos);
 float *cadastrarNotas();
 void mostrarAlunos(Aluno *alunos, int contador);
 

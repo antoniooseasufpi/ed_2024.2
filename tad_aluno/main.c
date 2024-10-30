@@ -5,10 +5,10 @@
 int main(){
     Aluno *alunos = NULL;
     int contador = 0;
-    cadastrarAluno(&contador, alunos);
-    cadastrarAluno(&contador, alunos);
-    cadastrarAluno(&contador, alunos);
-
+    alunos = cadastrarAluno(&contador, alunos);
+    alunos = cadastrarAluno(&contador, alunos);
+    alunos = cadastrarAluno(&contador, alunos);
+    
     mostrarAlunos(alunos, contador);
 
     return 0;
