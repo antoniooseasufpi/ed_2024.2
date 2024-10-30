@@ -3,6 +3,7 @@
 
 #include "aluno.h"
 
+
 Aluno *cadastrarAluno(int *contador, Aluno *alunos){
     alunos = (Aluno *) realloc(alunos, sizeof(Aluno) * (*(contador) + 1));
     printf("Nome: "); scanf("%s", alunos[*(contador)].nome);
