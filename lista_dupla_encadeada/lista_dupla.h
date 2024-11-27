@@ -17,3 +17,7 @@ Lista *inserir_elemento_final(Lista *li, int i);
 Lista *inserir_elemento_ordenado(Lista *li, int i);
 Lista *busca_elemento(Lista *li, int i);
 Lista *remove_elemento(Lista *li, int i);
+
+// lista dupla circular
+Lista *inserir_elemento_lista_circular(Lista *li, int i);
+void mostrar_lista_circular(Lista *li);

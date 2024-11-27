@@ -19,6 +19,38 @@ Lista *inserir_elemento_inicio(Lista *li, int i){
     return novo;
 }
 
+Lista *inserir_elemento_lista_circular(Lista *li, int i){
+    Lista *novo = (Lista*) malloc(sizeof(Lista));
+    novo->info = i;
+    if (li == NULL) {
+        novo->ant = novo;
+        novo->prox = novo;
+        return novo;
+    }
+
+    novo->ant = li->ant;
+    novo->prox = li;
+    li->ant->prox = novo;
+    li->ant = novo;
+
+    return novo;
+}
+
+void mostrar_lista_circular(Lista *li){
+    if (li == NULL) {
+        printf("Lista vazia.\n");
+        return;
+    }
+
+    Lista *aux = li;
+    do {
+        printf("%d <- %d -> %d\n", aux->ant->info, aux->info, aux->prox->info);
+        aux = aux->prox;
+    } while (aux != li);
+}
+
+
+
 void mostrar_lista(Lista *li){
     if (li == NULL) {
         printf("Lista vazia.\n");
